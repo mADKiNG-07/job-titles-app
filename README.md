@@ -12,6 +12,10 @@ bun run dev
 
 open http://localhost:3000
 
+## Why did i build this
+
+I needed it... lol
+
 ## Attribution
 
 This dataset is a collection of the following sources:

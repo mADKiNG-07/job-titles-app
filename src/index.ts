@@ -1,4 +1,5 @@
 import { Hono } from "hono";
+import { cors } from "hono/cors";
 import { readFileSync } from "fs";
 const jobTitlesData = require("./job-titles.json");
 
@@ -7,6 +8,8 @@ const app = new Hono();
 app.get("/", (c) => {
   return c.text("Hello Hono!");
 });
+
+app.use("*", cors());
 
 app.get("/all-job-titles", (c) => {
   return Response.json(jobTitlesData["job-titles"]);
